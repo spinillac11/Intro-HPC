@@ -1,0 +1,6 @@
+*.x
+*a.out
+*.o
+*.txt
+*.vscode
+
