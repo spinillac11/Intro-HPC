@@ -1,6 +1,6 @@
 /*
     Para graficar con las semillas requeridas ejecutar 3 veces y mandar 
-    a 3 archivos distintos cambiando la semilla en los argumentos.
+    a 3 archivos distintos cambiando la semilla (1, 2, 5)en los argumentos.
     ./a.out SEED 5000 3.5 0.4 2.7 4.6 50 > data.txt
 */
 
@@ -39,7 +39,7 @@ void compute_pdf(int seed, int nsamples, double mu, double sigma,double xmin, do
     }
 
     for (int i = 0; i < nbins; ++i) {
-        double bin_center = xmin + i * bin_width + bin_width / 2;
+        double bin_center = xmin + i * bin_width + bin_width / 2; 
         double pdf_value = static_cast<double>(histogram[i]) / (nsamples * bin_width);
         std::cout << bin_center << "\t" << pdf_value << "\n";
     }
