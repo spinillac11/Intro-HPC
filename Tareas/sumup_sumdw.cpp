@@ -10,7 +10,7 @@ REAL sumdw (int N);
 
 int main(void){
     int Nmax = 1.01e6;
-    int step = 10000; // Imprimir cada paso
+    int step = 1000; // Imprimir cada paso
     REAL delta = 0.0;
     REAL SumUP = 0.0;
     REAL SumDW = 0.0;
