@@ -1,3 +1,9 @@
+/*
+    Para graficar con las semillas requeridas ejecutar 3 veces y mandar 
+    a 3 archivos distintos cambiando la semilla en los argumentos.
+    ./a.out SEED 5000 3.5 0.4 2.7 4.6 50 > data.txt
+*/
+
 #include <random>
 #include <iostream>
 #include <cstdlib>
