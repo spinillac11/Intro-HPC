@@ -1,0 +1,25 @@
+El código inicialmente presentaba problemas en la función foo dado que habían divisiones por cero 
+debido a los valores recibidos de ii y jj, para ésto se podría cambiar los valores de éstas variables.
+Sin embargo, para tener un código general se hizo uso de un condicional que verificaba que nunguno de los divisores 
+fuera cero.
+
+Por otra parte, al usar unsigned en la función bar se define una variable sólo con valores enteros positivoslo que 
+generaba que al inicializar la variable con un valor negativo socurriera un overflow. Para ésto se hizo uso de un condicional 
+que en caso de inicializar con un valor negativo se multiplicara con -1 para obtener el valor absoluto.
+
+Igualmente al compilar con la bandera -Wall indicaba que no se hacía uso la variable v definida en la función baz, por lo que 
+se puede prescindir de la misma.
+
+En la función main se comenzó por borrar las declaraciones repetidas de ii, jj y kk, así cómo se cambiaron las variables de 
+los for para evitar confución con ii y jj, tratando de mantener la idea original. Respecto a los arrays se comenzó por 
+inicializar todos sus elementos en 0 (x = new double [NX]{0.0}; double y[NY]{0.0}, z[NZ]{0.0};)
+
+Luego en cada llamada de la función print_array se verificó que a cada array le correspondiera su tamaño para no tener problemas 
+de fuga de memoria, suponiendo que su función era verificar los valores guardados por el array. Para los casos donde la función 
+recibía cómo primer argumento un array restado con un valor entero, cómo print_array(x-NY, NY), se supusó que se quería restar 
+este valor a todos los elementos del array por lo que se hizo con bucles for para cada array de manera que se ajustara al tamaño 
+de cada uno. Finalmente se agrago la liberación de la memoria del array dinámico x.
+
+Dado que x se declara cómo un bloque de memoria dinámica este se almacena en el heap. Por otro lado y y z se almacenan en el stack 
+de manera contigua. Al declararse primero y y luego z en el stak estarían en el orden z - y.
+
