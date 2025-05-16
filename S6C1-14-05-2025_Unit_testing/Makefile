@@ -20,6 +20,6 @@ coverage: test_factorial.x
 
 
 clean:
-	rm -f *.o *.x a.out	
+	rm -f *.o *.x a.out	*.gcov *.gcda *.gcno *.info
 
 # firefox coverage/index.html
