@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /S6C1-14-05-2025_Unit_testing
+        working-directory: "/S6C1-14-05-2025_Unit_testing"
 
     steps:
     - name: Checkout code
