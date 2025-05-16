@@ -4,4 +4,8 @@
 *.txt
 *.vscode
 *.gitignore~
+*gcov
+*gcno
+*gcda
+
 
