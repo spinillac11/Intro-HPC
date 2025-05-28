@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
     auto end_fib_fast = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed_fib_fast = end_fib_fast - start_fib_fast;
 
-
+    // Impresion -> n, número de la serie, tiempo método recursivo, Tiempo método rápido 
     std::cout << n << "\t" 
               << result_fib_fast << "\t"
               << elapsed_fib.count() << "\t" 
