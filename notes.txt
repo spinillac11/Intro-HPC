@@ -60,3 +60,26 @@ Tarea -> tiempo de ejecución en función de block size para distintas optimizac
     Instrucción parallel
         parallel 'g++ -O{} matmul_block.cpp -o matmul_block_{}.x' ::: 0 1 2 3 fast 
         parallel --progress './matmul_block_{1}.x 1024 {2} 10 >> data_{1}.txt' ::: 0 1 2 3 fast ::: 2 4 8 16 32 64 128 256 512 1024 
+
+S8C1 - Profiling (Determinar donde se puede ahorrar tiempo en la ejecuión)
+
+Cuando se hace el profiling es bueno tartar que se demore bastante para tener una buena muestra
+
+Medir tiempo comleto de ejecución y saca un pequeño reporte en la cosola
+    /usr/bin/time ./a.out 
+    llamadas de usuario (funcion local) y llamadas al sistema operativo (Pide memoria)
+
+Measuring elapsed time:
+    std::chrono -> Mide tiempo de reloj
+    steady_clock -> no corresponde al tiempo del sistema operativo
+    high_resolution_clock y system_clock no necesariamente garantizan estabilidad para comparar
+
+Ctime:
+    Permite obtener el tiempo de procesador para tareas en paralelo
+
+Profilers (Informe sobre tiempo de funciones):
+    
+    gprof (Linux/Unix):
+        gcc -Wall -pg -g test_gprof.c -o test_gprof.x   (-pg para obtener la información de profiling gmon.out) 
+        gprof test_gprof.x gmon.out > analysis.txt (Pasar informe a .txt)
+
