@@ -21,7 +21,7 @@ for archivo, label, color in zip(archivos, labels, colors):
     data   = np.loadtxt(archivo, delimiter='\t')
     n      = data[:, 0]
     t_rec  = data[:, 2] / baseline_rec
-    t_fast = data[:, 3] / baseline_fast
+    t_fast = data[:, 3] / baseline_rec
 
     ax.plot(n, t_rec,  linestyle='--', marker='o',
             label=f'Recursivo ({label})', color=color)
