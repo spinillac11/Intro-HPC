@@ -1,0 +1,9 @@
+a.out;_start;[unknown] 2
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main 256719608
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main;func1 11894190349
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main;func1;[unknown] 1
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main;func1;new_func1 8222474089
+a.out;_start;__libc_start_main@@GLIBC_2.34;__libc_start_call_main;main;func2 8970635694
+a.out;_start;_dl_start;[unknown] 19582
+a.out;_start;_dl_start;[unknown];[unknown];[unknown] 111
+a.out;_start;_dl_start;_dl_sysdep_start;init_cpu_features.constprop.0;update_active.constprop.0 3285874
